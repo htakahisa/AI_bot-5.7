@@ -1,0 +1,46 @@
+# Unreal Engine 5.7 Project .gitignore
+
+# --- Temporary & Build Artifacts ---
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+Script/
+.vscode/
+.vs/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# --- Local User Settings ---
+# 各ユーザーのローカル設定（ウィンドウ配置等）を除外
+Saved/Config/WindowsEditor/
+Saved/Config/Windows/
+# ※ Saved/Config 配下にはプロジェクト設定が含まれる場合がありますが、
+# 本来は Config/ フォルダで管理すべきものです。
+
+# --- Platform Specific ---
+# 各プラットフォーム向けのパッケージ出力先
+Build/
+ArchivedBuilds/
+
+# --- File Locks & Plugins ---
+# ファイルの排他制御用ファイルを除外
+*.uproject.lock
+# プラグインのバイナリ（ソースからビルドする場合）
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+
+# --- Large Assets (Git LFS を使用しない場合) ---
+# ※ .uasset や .umap は Git LFS で管理するのが標準ですが、
+# もし Git そのものから完全に除外したい場合は以下を有効にします（非推奨）。
+# *.uasset
+# *.umap
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db

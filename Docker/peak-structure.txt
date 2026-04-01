@@ -1,0 +1,15 @@
+distances: ray7本のdistance の配列
+distToWall:
+isTargetVisible: 敵が見えるか
+timeTargetVisible: 敵が見えてからの時間
+targetDistance:敵までの距離
+targetVelocity:敵の移動速度
+currentAimError: 敵とどのくらいの角度離れているか
+myVelocity:自分の移動速度
+isReloading
+moveRight
+moveForward
+isStoppingTrigger
+isFire
+isCrouching
+myPitch
