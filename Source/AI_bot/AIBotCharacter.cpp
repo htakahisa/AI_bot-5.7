@@ -74,9 +74,9 @@ void AAIBotCharacter::RunInference(
 
     // ŠwK‚Ì³‹K‰»ŒW”‚É‡‚í‚¹‚Ä“ü—Í
     TArray<float> Input = {
-        RelPitch / 40.0f,
-        RelYaw / 120.0f,
-        Distance / 3600.0f
+        RelPitch / 45.0f,
+        RelYaw / 180.0f,
+        Distance / 3000.0f
     };
     TArray<float> Output = { 0.0f, 0.0f, 0.0f };
 
