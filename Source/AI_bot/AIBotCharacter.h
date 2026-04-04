@@ -27,24 +27,12 @@ public:
     void RunInference(float RelPitch, float RelYaw, float Distance,
         float& OutTurn, float& OutLockup, float& bOutShouldFire);
 
-    // モデル2用推論（input10個、output3個）
+    // モデル2用推論
     UFUNCTION(BlueprintCallable, Category = "NNE")
     void RunInferencePeak(
-        float Ray0, float Ray1, float Ray2, float Ray3, float Ray4, float Ray5, float Ray6,
-        float DistToWall,
-        bool bIsTargetVisible,
-        float TimeTargetVisible,
-        float TargetDistance,
-        float TargetVelocity,
-        float CurrentAimError,
-        float MyVelocity,
-        bool bIsReloading,
-        float CurrentMoveRight,
-        float CurrentMoveForward,
-        bool bIsStoppingTrigger,
-        bool bIsFireIn,
-        bool bIsCrouching,
-        float MyPitch,
+        const TArray<float>& Rays, const TArray<float>& WallDist45, const TArray<float>& WallDist90,
+        bool bIsTargetVisible, float TargetDistance, FVector MyVelocity, FVector TargetVelocity,
+        float TimeTargetVisible, FVector2D CurrentAimError, float MyPitch,
         float& OutMoveRight, float& OutMoveForward, float& OutFireValue, float& OutTurnDelta, float& OutLookUpDelta
     );
 
